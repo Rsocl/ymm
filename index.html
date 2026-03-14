@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -59,15 +61,23 @@ Es alguien muy especial para mí y valoro cada momento usted.
 Solo quería que supiera lo importante que es en mi vida.
 </div>
 
-<!-- IMAGEN DESDE GITHUB -->
 <div class="imagen">
-<img src="https://raw.githubusercontent.com/Rsocl/ymm/main/imagen.png" alt="imagen">
+<img src="https://raw.githubusercontent.com/Rsocl/ymm/main/imagen.png">
 </div>
 
-<!-- AUDIO DESDE GITHUB -->
-<audio autoplay loop>
+<audio id="musica" loop>
 <source src="https://raw.githubusercontent.com/Rsocl/ymm/main/perdoname.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+
+const audio = document.getElementById("musica");
+
+document.addEventListener("click", () => {
+    audio.play();
+}, { once: true });
+
+</script>
 
 </body>
 </html>
