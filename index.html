@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
 
-<title>Mensaje</title>
+<title>ymm</title>
 
 <style>
 
@@ -23,16 +23,12 @@ body{
     text-align:center;
 }
 
-/* FRASE */
-
 .frase{
-    font-size:32px;
+    font-size:28px;
     max-width:600px;
     line-height:1.6;
     padding:20px;
 }
-
-/* IMAGEN ABAJO DERECHA */
 
 .imagen{
     position:fixed;
@@ -41,8 +37,7 @@ body{
 }
 
 .imagen img{
-    width:150px;
-    height:auto;
+    width:170px;
 }
 
 </style>
@@ -53,23 +48,33 @@ body{
 <h1>¡Yeimy! ❤️</h1>
 
 <div class="frase">
-Me enseñaron que los números eran infinitos,  
-y lo comprobé con lo que siento por ti.  
-
+Me enseñaron que los números eran infinitos, y lo comprobé con lo que siento por ti.  
 Con usted todo se siente especial.  
 Me encanta lo bien que me siento con usted.  
 Es alguien realmente increíble.
 </div>
 
-<!-- AUDIO AUTOMÁTICO -->
-<audio autoplay loop>
-<source src="perdoname.mp3" type="audio/mpeg">
-</audio>
-
-<!-- ESPACIO PARA IMAGEN -->
+<!-- IMAGEN DESDE GITHUB -->
 <div class="imagen">
-<img src="imagen.png" alt="imagen">
+<img src="https://raw.githubusercontent.com/Rsocl/ymm/main/imagen.png" alt="imagen">
 </div>
+
+<script>
+
+const audioUrl = "https://raw.githubusercontent.com/Rsocl/ymm/main/perdoname.mp3";
+
+const audio = new Audio(audioUrl);
+audio.loop = true;
+audio.volume = 0.5;
+
+document.addEventListener('click', function iniciarAudio() {
+    audio.play().catch(error => {
+        console.log("Autoplay bloqueado por el navegador");
+    });
+    document.removeEventListener('click', iniciarAudio);
+});
+
+</script>
 
 </body>
 </html>
