@@ -24,7 +24,7 @@ body{
 }
 
 .frase{
-    font-size:28px;
+    font-size:26px;
     max-width:600px;
     line-height:1.6;
     padding:20px;
@@ -48,10 +48,15 @@ body{
 <h1>¡Yeimy! ❤️</h1>
 
 <div class="frase">
-Me enseñaron que los números eran infinitos, y lo comprobé con lo que siento por ti.  
-Con usted todo se siente especial.  
-Me encanta lo bien que me siento con usted.  
-Es alguien realmente increíble.
+Yeimita...
+
+Perdón si en algún momento lastimé sus sentimientos, nunca fue mi intención hacerla sentir mal.  
+Tal vez aún no hemos formalizado una relación, pero lo que siento por usted es sincero.
+
+La amo, quiero y aprecio muchísimo.  
+Es alguien muy especial para mí y valoro cada momento usted.
+
+Solo quería que supiera lo importante que es en mi vida.
 </div>
 
 <!-- IMAGEN DESDE GITHUB -->
@@ -59,22 +64,10 @@ Es alguien realmente increíble.
 <img src="https://raw.githubusercontent.com/Rsocl/ymm/main/imagen.png" alt="imagen">
 </div>
 
-<script>
-
-const audioUrl = "https://raw.githubusercontent.com/Rsocl/ymm/main/perdoname.mp3";
-
-const audio = new Audio(audioUrl);
-audio.loop = true;
-audio.volume = 0.5;
-
-document.addEventListener('click', function iniciarAudio() {
-    audio.play().catch(error => {
-        console.log("Autoplay bloqueado por el navegador");
-    });
-    document.removeEventListener('click', iniciarAudio);
-});
-
-</script>
+<!-- AUDIO DESDE GITHUB -->
+<audio autoplay loop>
+<source src="https://raw.githubusercontent.com/Rsocl/ymm/main/perdoname.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
